@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["RadioPlayerModule"]
+  },
+  "android": {
+    "modules": ["de.codext.radioplayer.RadioPlayerModule"]
+  }
+}

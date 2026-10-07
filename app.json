@@ -1,0 +1,99 @@
+{
+  "expo": {
+    "name": "Radiowelle",
+    "slug": "radiowelle",
+    "owner": "codext-gmbh",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "radiowelle",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0E0D12",
+    "ios": {
+      "bundleIdentifier": "de.codext.radiowelle",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "config": {
+        "usesNonExemptEncryption": false
+      },
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ],
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": true
+        },
+        "CFBundleDevelopmentRegion": "de"
+      },
+      "icon": "./assets/radiowelle.icon"
+    },
+    "android": {
+      "package": "de.codext.radiowelle",
+      "versionCode": 3,
+      "adaptiveIcon": {
+        "backgroundColor": "#FF5530",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": true,
+      "blockedPermissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#F6F4EF",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 96,
+          "dark": {
+            "backgroundColor": "#0E0D12",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-localization",
+        {
+          "supportedLocales": [
+            "de",
+            "en",
+            "fr",
+            "es",
+            "it",
+            "nl",
+            "pl",
+            "pt",
+            "tr",
+            "uk",
+            "ru",
+            "cs",
+            "sv",
+            "da"
+          ]
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-asset",
+      "./plugins/with-scene-lifecycle.js"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}

@@ -1,0 +1,41 @@
+appId: de.codext.radiowelle
+---
+- tapOn: "Einstellungen"
+- tapOn: "Sprache, .*"
+- tapOn: "English"
+- waitForAnimationToEnd
+- tapOn: "Radio"
+- waitForAnimationToEnd
+- scrollUntilVisible:
+    element: "Your stations"
+    direction: UP
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/02-home
+- tapOn:
+    point: "40%,88%"
+- extendedWaitUntil:
+    visible: "Find song"
+    timeout: 60000
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/01-player
+- tapOn: "Sleep timer"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/06-sleep
+- tapOn: "45 min"
+- tapOn: "Close player"
+- tapOn: "Search"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/03-search
+- tapOn: "My Stations"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/04-library
+- tapOn: "Search"
+- scrollUntilVisible:
+    element: "Countries"
+    direction: DOWN
+- tapOn: "Countries"
+- extendedWaitUntil:
+    visible: "Germany"
+    timeout: 30000
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/05-countries

@@ -1,0 +1,27 @@
+appId: de.codext.radiowelle
+---
+- tapOn: "1LIVE"
+- tapOn:
+    point: "40%,88%"
+- extendedWaitUntil:
+    visible: "Zu Favoriten hinzufügen"
+    timeout: 10000
+- tapOn: "Zu Favoriten hinzufügen"
+- extendedWaitUntil:
+    visible: "Song finden"
+    timeout: 60000
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/01-player
+- tapOn: "Sleep-Timer"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/06-sleep
+- tapOn: "30 Min."
+- tapOn: "Player schließen"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/02-home
+- tapOn: "Suche"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/03-search
+- tapOn: "Meine Sender"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/04-library

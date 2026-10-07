@@ -1,0 +1,9 @@
+{
+  "name": "radio-player",
+  "version": "1.0.0",
+  "description": "Live radio playback with lock screen controls and stream metadata",
+  "main": "index.ts",
+  "license": "UNLICENSED",
+  "author": "Codext GmbH",
+  "homepage": "https://codext.de"
+}

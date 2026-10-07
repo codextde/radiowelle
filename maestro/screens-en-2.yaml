@@ -1,0 +1,10 @@
+appId: de.codext.radiowelle
+---
+- tapOn:
+    point: "82%,95%"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/03-search
+- tapOn:
+    point: "39%,95%"
+- waitForAnimationToEnd
+- takeScreenshot: ${OUT}/04-library
